@@ -133,14 +133,10 @@ function jQueryAjax(){
 		//when a response is revceived from the server, the response/data will then be sent to the callback function "jQueryCallback"
 		success: jQueryCallback
 		
-		//check the data
-		//console.log(response);
 	});
 	//Correction: commented out '$(mydiv).append('<br>GeoJSON data:<br>' + JSON.stringify(mydata));'
 	//$(mydiv).append('<br>GeoJSON data:<br>' + JSON.stringify(mydata));
 	
-	//check the data
-	//console.log(response);
 };
 //Correction: commented out '$(mydiv).append('GeoJSON data: ' + JSON.stringify(mydata));'
 //$(mydiv).append('GeoJSON data: ' + JSON.stringify(mydata));
@@ -157,7 +153,13 @@ function jQueryCallback(response){
 	//Correction 1: changed $(mydiv) to $("#mydiv")
 	//Correction 2: changed 'append('GeoJSON data: ' + JSON.stringify(mydata))' to 'append('<p>'+htmlString+'</p>')'
 	$("#mydiv").append('<p>'+htmlString+'</p>');
+	
+	//check the data
+	console.log(response);
 };
+
+	//check the data
+	//console.log(response);
 
 //assign the onload event to whatever is returned from the initialize function when the code is executed. 
 window.onload=initialize();
